@@ -1,0 +1,23 @@
+---
+export interface Props {
+  src: string;
+  svg: string;
+  description?: string;
+}
+const { src, svg, description } = Astro.props;
+---
+
+<a
+  download=""
+  href={src}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="flex justify-center items-center transition-all hover:scale-110 duration-300 cursor-pointer border-2 p-3 rounded-xl text-black hover:text-black hover:bg-white border-black buttonAnimation invert hover:invert-0"
+>
+  <p>{description}</p>
+  <img
+    class="w-6 octicon octicon-mark-github v-align-middle"
+    src={svg}
+    alt=""
+  />
+</a>

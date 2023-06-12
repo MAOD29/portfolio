@@ -1,0 +1,17 @@
+---
+export interface Props {
+    src: string;
+    alt: string;
+    name: string;
+}
+const { src, alt, name } = Astro.props;
+---
+
+<li class="relative group">
+    <img alt={alt} src={src} class="w-[4.5rem] h-20" />
+    <p
+        class="absolute z-10 p-2 rounded-md dark:bg-[#15191e] invisible group-hover:visible"
+    >
+        {name}
+    </p>
+</li>

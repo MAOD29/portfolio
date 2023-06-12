@@ -1,0 +1,29 @@
+---
+import Link from "./Link.astro";
+
+export interface Props {
+  title: string;
+  src: string;
+  github: string;
+  demo: string;
+}
+const { title, src, github, demo } = Astro.props;
+---
+
+<div class="slider-item flex flex-col justify-center items-center gap-2">
+  <img
+    class="transition-all hover:scale-110 duration-300 cursor-pointer rounded-xl object-cover w-full h-full"
+    src={src}
+  />
+  <span>{title}</span>
+  <div class="flex gap-4">
+    <Link src={github} svg="/github.svg" />
+    <Link src={demo} svg="/link.svg" />
+  </div>
+</div>
+
+<style>
+  .slider-item {
+    flex: 0 0 50%;
+  }
+</style>
