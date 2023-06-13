@@ -24,6 +24,25 @@ export const PROYECTS = [
     demo: "https://my-todo-list-online.netlify.app/",
   },
 ];
+export const EXPERIENCES = [
+  {
+    company: "Htech",
+    job: "Frontend Software Engineer",
+    date: "Noviembre 2022 - Actualidad",
+    task: ["Aqui anotare lo que hago", "Aqui anotare lo que hago"],
+  },
+  {
+    company: "Zora Systems",
+    job: "Software Engineer",
+    date: "Febrero 2020 - Octubre 2022",
+    task: [
+      "Desarrollo de API REST para la comunicación de la APP interna y aplicaciones de terceros",
+      "Integración de API REST de terceros",
+      "Desarrollo de módulos del sitio web",
+      "Desarrollo del modulo de conciliación integrando pasarelas de pago",
+    ],
+  },
+];
 
 export const LINKS = [
   {
