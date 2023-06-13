@@ -1,24 +1,75 @@
 ---
+import { t } from "i18next";
 import { PROYECTS } from "../shared/constants";
 import ProyectItem from "./ProyectItem.astro";
 import TheSection from "./TheSection.astro";
+import "../../public/splide.min.css";
 ---
 
 <TheSection
   id="proyects"
-  title="Proyects"
-  description="These are some of the projects I've built."
+  title={t("home.proyects.title")}
+  description={t("home.proyects.subtitle")}
 >
-  <div class="flex w-full overflow-x-auto overflow-y-hidden scroll gap-8">
-    {
-      PROYECTS.map((proyect) => (
-        <ProyectItem
-          title={proyect.title}
-          src={proyect.src}
-          github={proyect.github}
-          demo={proyect.demo}
-        />
-      ))
-    }
+  <div class="container mx-auto">
+    <div class="splide">
+      <div class="splide__arrows">
+        <button class="bg-gray-900 shadow splide__arrow splide__arrow--prev">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 text-white"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+          </svg>
+        </button>
+        <button class="bg-gray-900 shadow splide__arrow splide__arrow--next">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 text-white"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="splide__track">
+        <div class="splide__list gap-x-4">
+          {
+            PROYECTS.map((element) => (
+              <ProyectItem
+                title={element.title}
+                src={element.src}
+                github={element.github}
+                demo={element.demo}
+              />
+            ))
+          }
+        </div>
+      </div>
+    </div>
   </div>
+
+  <script>
+    const splide = new Splide(".splide", {
+      type: "loop",
+      autoplay: false,
+      pagination: false,
+    });
+    splide.mount();
+  </script>
 </TheSection>
+
+<script src="../../public/splide.min.js"></script>

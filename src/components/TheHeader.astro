@@ -1,3 +1,14 @@
+---
+console.log(Astro.url.pathname);
+let classButtonEs  = 'p-2 rounded-l-lg';
+let classButtonEn  = 'p-2 rounded-r-lg';
+
+if(Astro.url.pathname === '/'){
+  classButtonEs += ' bg-white';
+}else{
+  classButtonEn += ' bg-white';
+}
+---
 <header class="flex justify-between items-center font-medium">
   <span class="text-center text-3xl">MAOD</span>
   <nav class="hidden sm:block">
@@ -19,11 +30,11 @@
     </ul>
   </nav>
   <div class="flex border rounded-lg">
-    <button class="bg-white p-2 rounded-l-lg">
+    <a id="buttonEs" href="/" class={classButtonEs}>
       <img class="w-8" src="/mexico.svg" alt="español" />
-    </button>
-    <button class="p-2 rounded-r-lg">
+    </a>
+    <a id="buttonEn" href="/en" class={classButtonEn}>
       <img class="w-8" src="/usa.svg" alt="ingles" />
-    </button>
+    </a>
   </div>
 </header>

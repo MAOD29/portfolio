@@ -1,0 +1,42 @@
+{
+    "site": {
+      "title": "MAOD",
+      "description": "Soy Miguel Angel Olea Diaz desarrollador de software con mas de 4 años de experiencia."
+    },
+    "home": {
+        "welcome": "Welcome to my awesome website!",
+        "title": " Front-End Web Developer",
+        "about": "+4 años de experiencia, especializado en crecer personal y profesionalmente, aplicando conocimientos adquiridos y nuevos para la resolución de problemas y desarrollo de proyectos que me hagan sentir orgulloso.",
+        "contact":"Cotactame",
+        "proyects":{
+            "title":"Proyectos",
+            "subtitle":"Aquí obtnego mis habilidades"
+        },
+        "experience":{
+            "title":"Experencia",
+            "subtitle":"Aquí reflejo mis habilidades",
+            "exp":[
+              {
+                "company": "Htech",
+                "job": "Frontend Software Engineer",
+                "date": "Noviembre 2022 - Actualidad",
+                "task": [
+                  "Aqui anotare lo que hago",
+                  "Aqui anotare lo que hago Desarrollo de API REST para la comunicación de la APP interna y aplicaciones de terceros Desarrollo de API REST para la comunicación de la APP interna y aplicaciones de terceros"
+                ]
+              },
+              {
+                "company": "Zora Systems",
+                "job": "Software Engineer",
+                "date": "Febrero 2020 - Octubre 2022",
+                "task": [
+                  "Desarrollo de API REST para la comunicación de la APP interna y aplicaciones de terceros",
+                  "Integración de API REST de terceros",
+                  "Desarrollo de módulos del sitio web",
+                  "Desarrollo del modulo de conciliación integrando pasarelas de pago"
+                ]
+              }
+            ]
+        }
+    }
+  }

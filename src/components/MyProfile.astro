@@ -1,7 +1,9 @@
 ---
+import i18next, { t } from "i18next";
 import { SKILLS, LINKS } from "../shared/constants";
 import IconSkill from "./IconSkill.astro";
 import Link from "./Link.astro";
+
 ---
 
 <section class="relative mt-16">
@@ -10,12 +12,14 @@ import Link from "./Link.astro";
   >
     <div class="grid grid-cols-2 gap-4">
       <div class="col-span-2 md:col-span-1 animationIn">
-        <h2 class="text-center lg:text-left">Hi, I'm</h2>
-        <h4 class="mb-5 text-center lg:text-left">Front-End Web Developer</h4>
+        <h2 class="text-center lg:text-left text-xl"> {t("home.welcome")}</h2>
+        <h4 class="mb-5 text-center lg:text-left text-2xl">
+          {t("home.title")}
+        </h4>
         <p class="text-slate-500 dark:text-slate-300 text-center lg:text-left">
-          +4 años de experiencia.
+          {t("home.about")}
         </p>
-        <h3 class="mt-5 mb-2 text-center lg:text-left">Contact</h3>
+        <h3 class="mt-5 mb-2 text-center lg:text-left"> {t("home.contact")}</h3>
         <div class="flex flex-wrap justify-center lg:justify-start gap-5">
           {
             LINKS.map((link) => (
@@ -29,7 +33,7 @@ import Link from "./Link.astro";
         </div>
       </div>
       <div class="col-span-2 md:col-span-1">
-        <h2 class="animationIn mb-5 text-center lg:text-left">My skills</h2>
+        <h2 class="animationIn mb-5 text-center lg:text-left">Skills</h2>
         <ul
           class="flex flex-wrap gap-3 justify-center lg:justify-start"
           id="skills"

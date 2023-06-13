@@ -10,13 +10,15 @@ export interface Props {
 const { title, src, github, demo } = Astro.props;
 ---
 
-<div class="slider-item flex flex-col justify-center items-center gap-2">
+<div
+  class="splide__slide flex-[0_0_85%] md:flex-[0_0_50%] flex flex-col justify-center items-center gap-2"
+>
   <img
-    class="transition-all hover:scale-110 duration-300 cursor-pointer rounded-xl object-cover w-full h-full"
+    class="transition-all hover:scale-110 duration-300 cursor-pointer rounded-xl object-cover w-full h-full p-4"
     src={src}
   />
   <span>{title}</span>
-  <div class="flex gap-4">
+  <div class="flex gap-4 p-1">
     <Link src={github} svg="/github.svg" />
     <Link src={demo} svg="/link.svg" />
   </div>

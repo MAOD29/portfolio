@@ -1,3 +1,5 @@
+import { t } from "i18next";
+
 export const PROYECTS = [
   {
     title: "ROCK PAPER SCISSORS",
@@ -12,34 +14,38 @@ export const PROYECTS = [
     demo: "https://my-todo-list-online.netlify.app/",
   },
   {
-    title: "ROCK PAPER SCISSORS",
+    title: "ROCK PAPER SCISSORS 2",
     src: "/proyect_rps.webp",
     github: "https://github.com/MAOD29/rock-paper-scissors",
     demo: "https://rps-game-online.netlify.app/",
   },
   {
-    title: "TODO LIST",
+    title: "TODO LIST 3",
     src: "/proyect_todo.webp",
     github: "https://github.com/MAOD29/todo-list",
     demo: "https://my-todo-list-online.netlify.app/",
   },
 ];
+
 export const EXPERIENCES = [
   {
-    company: "Htech",
-    job: "Frontend Software Engineer",
-    date: "Noviembre 2022 - Actualidad",
-    task: ["Aqui anotare lo que hago", "Aqui anotare lo que hago"],
+    company: t("home.experience.exp.0.company"),
+    job: t("home.experience.exp.0.job"),
+    date: t("home.experience.exp.0.date"),
+    task: [
+      t("home.experience.exp.0.task.0"),
+      t("home.experience.exp.0.task.1"),
+    ],
   },
   {
-    company: "Zora Systems",
-    job: "Software Engineer",
-    date: "Febrero 2020 - Octubre 2022",
+    company: t("home.experience.exp.1.company"),
+    job: t("home.experience.exp.1.job"),
+    date: t("home.experience.exp.1.date"),
     task: [
-      "Desarrollo de API REST para la comunicación de la APP interna y aplicaciones de terceros",
-      "Integración de API REST de terceros",
-      "Desarrollo de módulos del sitio web",
-      "Desarrollo del modulo de conciliación integrando pasarelas de pago",
+      t("home.experience.exp.1.task.0"),
+      t("home.experience.exp.1.task.1"),
+      t("home.experience.exp.1.task.2"),
+      t("home.experience.exp.1.task.3"),
     ],
   },
 ];
@@ -58,7 +64,7 @@ export const LINKS = [
   {
     src: "https://www.linkedin.com/in/maod/overlay/1635501886583/single-media-viewer/?profileId=ACoAACq4pAQBjs9AQH5ziJShgI-FfNL7aT7_bF0",
     svg: "/cv.svg",
-    description: "Revisa mi CV ",
+    description: "CV ",
   },
 ];
 
