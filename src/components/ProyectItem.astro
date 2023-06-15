@@ -10,12 +10,39 @@ export interface Props {
 const { title, src, github, demo } = Astro.props;
 ---
 
+<script>
+  const openDialogs = document.querySelectorAll("img.show-dialog");
+  const closeButtons = document.querySelectorAll("button.close-dialog");
+  let alt = "";
+
+  openDialogs.forEach((button) => {
+    button.addEventListener("click", () => {
+      alt = button.getAttribute("alt") || "";
+      const dialog = document.getElementById(`dialog-${alt}`);
+      if (dialog) {
+        dialog.show();
+        document.body.className += " overflow-hidden";
+      }
+    });
+  });
+
+  closeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const dialog = document.getElementById(`dialog-${alt}`);
+      if (dialog) {
+        dialog.close();
+        document.body.className += " overflow-y-scroll";
+      }
+    });
+  });
+</script>
+
 <div
   class="splide__slide flex-[0_0_85%] md:flex-[0_0_50%] flex flex-col justify-center items-center gap-2"
 >
   <img
     alt={title}
-    class="transition-all hover:scale-110 duration-300 cursor-pointer rounded-xl object-cover w-[90%] h-[90%] p-4"
+    class="show-dialog transition-all hover:scale-110 duration-300 cursor-pointer rounded-xl object-cover p-4"
     src={src}
   />
   <span>{title}</span>

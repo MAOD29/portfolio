@@ -4,6 +4,7 @@ import { PROYECTS } from "../shared/constants";
 import ProyectItem from "./ProyectItem.astro";
 import TheSection from "./TheSection.astro";
 import "../assets/splide.min.css";
+import ProyectInfo from "./ProyectInfo.astro";
 ---
 
 <TheSection
@@ -48,12 +49,12 @@ import "../assets/splide.min.css";
       <div class="splide__track">
         <div class="splide__list gap-x-4">
           {
-            PROYECTS.map((element) => (
+            PROYECTS.map((proyect) => (
               <ProyectItem
-                title={element.title}
-                src={element.src}
-                github={element.github}
-                demo={element.demo}
+                title={proyect.title}
+                src={proyect.src}
+                github={proyect.github}
+                demo={proyect.demo}
               />
             ))
           }
@@ -61,13 +62,25 @@ import "../assets/splide.min.css";
       </div>
     </div>
   </div>
+  {
+    PROYECTS.map((proyect) => (
+      <ProyectInfo
+        title={proyect.title}
+        src={proyect.src}
+        github={proyect.github}
+        demo={proyect.demo}
+        description={proyect.description}
+        pointsLearned={proyect.pointsLearned}
+      />
+    ))
+  }
+
   <script>
-      const splide = new Splide(".splide", {
+    const splide = new Splide(".splide", {
       type: "loop",
       autoplay: false,
       pagination: false,
     });
     splide.mount();
-    
   </script>
 </TheSection>
