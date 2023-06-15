@@ -3,8 +3,8 @@ import { LINKS } from "../shared/constants";
 import Link from "./Link.astro";
 ---
 
-<footer class="h-14 bg-[#1f252e] flex justify-center items-center w-full">
-  <div class="flex items-center tracking-wider gap-4">
+<footer class="h-16 bg-[#1f252e] flex justify-center items-center w-full">
+  <div class="flex items-center gap-4">
     {
       LINKS.map((link) => (
         <Link src={link.src} svg={link.svg} description={link.description} />

@@ -77,7 +77,7 @@ export const LINKS = [
   {
     src: "https://www.linkedin.com/in/maod/overlay/1635501886583/single-media-viewer/?profileId=ACoAACq4pAQBjs9AQH5ziJShgI-FfNL7aT7_bF0",
     svg: "/cv.svg",
-    description: "CV ",
+    description: "",
   },
 ];
 
