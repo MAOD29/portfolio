@@ -21,7 +21,7 @@ const { title, src, github, demo } = Astro.props;
       const dialog = document.getElementById(`dialog-${alt}`);
       if (dialog) {
         dialog.show();
-        document.body.className += " overflow-hidden";
+        document.body.className = "overflow-hidden";
       }
     });
   });
@@ -31,7 +31,7 @@ const { title, src, github, demo } = Astro.props;
       const dialog = document.getElementById(`dialog-${alt}`);
       if (dialog) {
         dialog.close();
-        document.body.className += " overflow-y-scroll";
+        document.body.className = "overflow-y-scroll";
       }
     });
   });
